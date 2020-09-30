@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
     public Joystick MovementJoystick;
     public Joystick LookJoystick;
     public CharacterController controller;
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
     public Vector2 LookAxis;
 
 
+    //Main player loop
     void Update()
     {
         CameraLook();
@@ -49,6 +51,7 @@ public class Player : MonoBehaviour
 
     }
 
+    //Checks for screen touch and either grabs/drops an object or interacts with it
     void buttonClick()
     {
         if (Input.GetMouseButtonDown(1))
@@ -73,6 +76,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Camera look function
     void CameraLook()
     {
 
@@ -87,6 +91,7 @@ public class Player : MonoBehaviour
         transform.Rotate(Vector3.up * mouseX);
     }
 
+    // player movement function
     void PlayerMove()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -107,6 +112,7 @@ public class Player : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
+    // Stores the object that the player is looking at.
     void CheckCentreObject()
     {
         centreObject = null;
@@ -132,11 +138,13 @@ public class Player : MonoBehaviour
         //}
     }
 
+    // Carries gameobjects infront of player
     void carry(GameObject g)
     {
         g.transform.position = Vector3.Lerp(g.transform.position, mainCamera.transform.position + mainCamera.transform.forward * g.GetComponent<Interactable>().carryDistance, Time.deltaTime * smooth);
     }
 
+    // grabs object
     void grabObject()
     {
         if (centreObject.GetComponent<Interactable>().canGrab)
@@ -147,6 +155,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // drops object
     void dropObject()
     {
         carrying = false;

@@ -30,6 +30,7 @@ public class Inventory : MonoBehaviour
         Debug.Log("UPDATING INVENTORY UI");
     }
 
+    // adds item to inventory
     public void PickupItem(GameObject item)
     {
         if (items.Count < slots)
@@ -50,6 +51,7 @@ public class Inventory : MonoBehaviour
 
     }
 
+    // removes item from inventory
     public void Remove(GameObject item)
     {
         items.Remove(item);
@@ -65,6 +67,8 @@ public class Inventory : MonoBehaviour
         }
 
     }
+
+    // places item
     public void PlaceItem()
     {
         //

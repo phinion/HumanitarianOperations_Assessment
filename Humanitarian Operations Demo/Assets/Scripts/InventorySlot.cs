@@ -9,6 +9,7 @@ public class InventorySlot : MonoBehaviour
     public Image icon;
     Item item;
 
+	// Add item to inventory slot
 	public void AddItem(Item newItem)
 	{
 		item = newItem;
@@ -16,6 +17,7 @@ public class InventorySlot : MonoBehaviour
 		icon.enabled = true;
 	}
 
+	// clears inventory slot
 	public void ClearSlot()
 	{
 		item = null;

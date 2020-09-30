@@ -4,21 +4,12 @@ using UnityEngine;
 
 public class UIChange : MonoBehaviour
 {
+
     public bool isPaused = false;
     public GameObject pauseMenuUI;
     public GameObject InGameUI;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //Switches between pause menu UI and in game UI
     public void changeMenu()
     {
         if (isPaused)
@@ -31,6 +22,8 @@ public class UIChange : MonoBehaviour
         }
         isPaused = !isPaused;
     }
+
+    //show pause menu ui
     void Pause()
     {
         InGameUI.SetActive(false);
@@ -38,6 +31,7 @@ public class UIChange : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    //Shows ingame ui
     void Resume()
     {
         pauseMenuUI.SetActive(false);

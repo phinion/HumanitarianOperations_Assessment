@@ -26,6 +26,7 @@ public class DoorScript : Interactable
 
 	}
 
+	// Activates door animation
 	void ObjControl(bool _direction)
 	{
 		animator.SetBool("open", _direction);

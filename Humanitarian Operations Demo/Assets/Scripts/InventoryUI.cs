@@ -16,12 +16,7 @@ public class InventoryUI : MonoBehaviour
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Updates ui everytime a player pickups or drops item from inventory
     void UpdateUI()
     {
         Debug.Log("UPDATING UI");

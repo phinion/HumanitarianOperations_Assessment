@@ -4,18 +4,8 @@ using UnityEngine;
 
 public class QuitDemo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //Simple script to quit the demo
     public void Quit()
     {
         Application.Quit();

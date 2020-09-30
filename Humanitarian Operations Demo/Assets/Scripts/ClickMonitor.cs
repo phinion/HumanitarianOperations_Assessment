@@ -5,14 +5,13 @@ using UnityEngine.Video;
 
 public class ClickMonitor : Interactable
 {
-    // Start is called before the first frame update
     public override void Interact()
     {
         base.Interact();
         playVideo();
     }
 
-    // Update is called once per frame
+    // play video
     void playVideo()
     {
         VideoPlayer vp = this.gameObject.GetComponent<VideoPlayer>();

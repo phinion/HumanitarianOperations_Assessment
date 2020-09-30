@@ -5,6 +5,8 @@ public class Item : Interactable {
     new public string name;
     public int itemID;
     public Sprite icon = null;
+
+    // Interact function that comes with Interactable type
     public override void Interact()
     {
         base.Interact();
@@ -12,6 +14,7 @@ public class Item : Interactable {
         Pickup();
     }
 
+    // Pickup item
     void Pickup()
 	{
 		Debug.Log("Pickup up item");

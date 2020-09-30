@@ -18,5 +18,6 @@ public class ItemList : MonoBehaviour
 		instance = this;
 	}
 
+	// Stores a list of all the items the player can pickup into the inventory
 	public List<GameObject> itemGameObjectsList = new List<GameObject>();
 }
